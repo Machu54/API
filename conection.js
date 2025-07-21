@@ -10,17 +10,10 @@ mongoose.connect(mongoUrl, {
 
 
 const collectionsh = new mongoose.Schema({
-  ubicacion: String,
-  calidadaire: Number,
-  humedad:Number,
-  temperatura: Number,
-  lluvia: String,
-  fecha:{
-    type: Date,
-    default: Date.now 
-  }
+  tempratura: Number,
+  humedad: Number,
 }, { versionKey: false });
 
 module.exports = {
-  coleccionmodelo: mongoose.model("Mediciones", collectionsh)
+  coleccionmodelo: mongoose.model("dht", collectionsh)
 };

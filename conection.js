@@ -10,10 +10,10 @@ mongoose.connect(mongoUrl, {
 
 
 const collectionsh = new mongoose.Schema({
-  tempratura: Number,
+  temperatura: Number,
   humedad: Number,
-}, { versionKey: false });
+}, { versionKey: false }); 
 
 module.exports = {
-  coleccionmodelo: mongoose.model("dht", collectionsh)
+  coleccionmodelo: mongoose.model("dhts", collectionsh)
 };

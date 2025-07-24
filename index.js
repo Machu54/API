@@ -21,7 +21,7 @@ app.get('/api/mediciones', async (req, res) => {
   }
 });
 
-app.get('/api/mediciones/:id', async (req, res) => {
+app.get('/api/medicionesid/:id', async (req, res) => {
   try {
         const id= req.params.id;
     const docs = await mongo.coleccionmodelo.findOne({_id:id});
@@ -75,6 +75,6 @@ app.delete('/api/medicionesdel/:id', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Listening on port ${PORT}`);
 });
